@@ -1,0 +1,18 @@
+# poll, epoll, select, kqueue를 blocking mode와 사용해도 될까?
+
+출처: https://www.baeldung.com/java-nio-selector
+출처: https://eklitzke.org/blocking-io-nonblocking-io-and-epoll
+
+### 개요
+java nio의 Selector에 등록할 수 있는 채널은 SelectableChannel 구현체이다.
+SelectableChannel::register 메소드로 채널을 Selector에 등록한다.
+이 때 channel이 non-blocking mode가 아니면 예외가 발생한다.
+
+그래서 poll, epoll, select, kqueue도 오직 non blocking mode의 소켓이랑 동작한다고 착각했다.
+
+### but
+아님.
+같이 써도 상관없음.
+poll, epoll, select, kqueue는 이를 신경쓰지 않음
+
+단, non blocking mode로 사용했을 때 좀 더 효율적일 수 있음
