@@ -6,6 +6,6 @@
 
 어노테이션은 상속되지 않는다.
 
-따라서 자식에게 상속하고 싶으면 Inherited 라는 mete 어노테이션을 붙여줘야한다.
+따라서 자식에게 상속하고 싶으면 Inherited 라는 meta 어노테이션을 붙여줘야한다.
 
 참고: https://docs.oracle.com/javase/7/docs/api/java/lang/annotation/Inherited.html
